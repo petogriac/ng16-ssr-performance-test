@@ -4,13 +4,14 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build-dev": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "dev:ssr": "ng run ng16-ssr-performance-test:serve-ssr",
     "serve:ssr": "node dist/ng16-ssr-performance-test/server/main.js",
     "build:ssr": "ng build && ng run ng16-ssr-performance-test:server",
-    "prerender": "ng run ng16-ssr-performance-test:prerender"
+    "prerender": "ng run ng16-ssr-performance-test:prerender",
+    "vercel-build": "npm run build:ssr"
   },
   "private": true,
   "dependencies": {
