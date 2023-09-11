@@ -1,4 +1,4 @@
-<img [src]='image' alt="" loading="lazy">
+<img [src]='image' alt="" [attr.loading]="isFirst ? 'eager': 'lazy'" [attr.fetchPriority]=" isFirst ? 'high' : 'auto'"  >
 <div>
   <h1>{{title}}</h1>
   <p>{{description}}</p>
