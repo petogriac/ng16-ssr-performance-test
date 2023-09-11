@@ -16,7 +16,7 @@ import { FilterComponent } from '../../components/filter/filter.component';
 })
 export class ListingComponent implements OnInit {
   @Input({required: true}) listDelay!: number;
-  protected data = signal(undefined);
+  protected data = signal<any | undefined>(undefined);
 
   ngOnInit() {
     getData(this.listDelay, this.data);
