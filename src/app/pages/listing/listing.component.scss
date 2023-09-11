@@ -8,3 +8,8 @@
   gap: 20px;
   grid-template-columns: 100%;
 }
+
+app-history, app-filter {
+  display: block;
+  margin-bottom: 20px;
+}

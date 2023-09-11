@@ -3,7 +3,7 @@ import { DetailComponent } from './detail.component';
 
 export const DETAIL_ROUTES: Routes = [
   {
-    path: ':detailTitle',
+    path: ':articleId',
     children: [
       {
         path: '**',
