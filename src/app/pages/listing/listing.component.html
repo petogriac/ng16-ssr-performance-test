@@ -1,1 +1,18 @@
-<p>listing works!</p>
+<ng-container *ngIf="data()">
+  <h1>Listing {{listDelay}}</h1>
+  <p>{{$any(data()).content[0].common.title + ' ' + $any(data()).content[1].common.title}}</p>
+
+<!--  <History/>-->
+
+<!--  <Filter style={{marginBottom: '20px'}} values={{subcategory: data.filter.subCategory}}/>-->
+
+  <div class="items">
+    <a app-article-item *ngFor="let article of $any(data()).content"
+      routerLink="/d/{{$any(article).id}}"
+      [title]="$any(article).common.title"
+      [description]="$any(article).common.description"
+      [image]="$any(article).image.link"
+      [id]="$any(article).id"
+    ></a>
+  </div>
+</ng-container>

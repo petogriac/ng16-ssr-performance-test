@@ -1,0 +1,10 @@
+:host {
+  display: block;
+  padding: 20px;
+}
+
+.items {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: 100%;
+}

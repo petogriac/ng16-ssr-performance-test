@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component } from '@angular/core';
+import { ChangeDetectionStrategy, Component, HostListener, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,5 +10,8 @@ import { CommonModule } from '@angular/common';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class BookmarkComponent {
-
+  @HostListener('click') onClick() {
+    console.log('Bookmark clicked for id: ' + this.id);
+  }
+  @Input({required: true}) id!: number;
 }
